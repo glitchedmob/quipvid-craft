@@ -1,0 +1,53 @@
+{% extends "_base" %}
+{% from "components/_quipCard" import quipCard %}
+
+{% block content %}
+    <div id="banner">
+        <div class="pad25 hidden-desktop"></div>
+
+        <div class="container intro_wrapper">
+            <div class="mobile_badges row">
+                <a href="https://itunes.apple.com/us/app/id1133205545">
+                    <img src="/img/app_store.svg" alt="">
+                </a>
+                <a href='https://play.google.com/store/apps/details?id=com.quipvid.quipvid&utm_source=global_co&utm_medium=prtnr&utm_content=Mar2515&utm_campaign=PartBadge&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img alt='Get it on Google Play' src='/img/google-play-badge.png'/></a>
+
+            </div>
+            <div class="inner_content">
+                <h1 class="title">
+                    <i class="icon-facetime-video animated fadeIn"></i>
+                    <i class="icon-quote-left animated fadeIn"></i>
+                </h1>
+
+                <h1 class="intro">
+                    Welcome to movie quote headquarters!  <span class="hue">QuipVid</span> aims to be your new addiction and your friend's biggest annoyance by giving you access to stupid easy
+                    methods of sharing your favorite movie quotes.  To say we are in <span class="hue">beta</span> would be an understatement, but please feel free to test the waters :)
+                </h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="container wrapper">
+        <div class="inner_content">
+            <div class="pad45"></div>
+            <h1 class="into">Most Popular Quips</h1>
+
+            {% set quips = craft
+                .entries()
+                .section('quips')
+                .orderBy('views desc')
+                .limit(20)
+                .all()
+            %}
+
+            <div id="load" class="row latest" data-page="1">
+                {% for quip in quips %}
+                    {{ quipCard(quip) }}
+                {% endfor %}
+
+            </div>
+        </div><!--//page-->
+
+        <div class="pad25 hidden-desktop"></div>
+    </div>
+{% endblock %}

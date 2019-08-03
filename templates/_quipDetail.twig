@@ -1,0 +1,55 @@
+{% extends "_base" %}
+{% from "components/_quipCard" import quipCard %}
+
+{% block content %}
+    <div class="container wrapper">
+        <div class="inner_content">
+            <div class="pad30"></div>
+
+            <div class="row page_watch" itemscope itemtype="http://schema.org/VideoObject">
+
+                <div class="span8">
+                    <div class="video" id="quip_player">
+                        <div class="control">
+                            <i class="icon-refresh replay"></i>
+                        </div>
+                        {% set video = entry.video.one() %}
+                        {% set image = entry.image.one() %}
+                        <video src="{{ video ? video.url : entry.importedVideo }}" poster="{{ image ? image.url : entry.importedImage }}" autoplay playsinline></video>
+                    </div>
+                    <div class="pad25"></div>
+                </div>
+                <div class="span4">
+                    <h2 itemprop="name">{{ entry.title }}</h2>
+
+                    <ul class="icons">
+                        <li><i class="icon-film black"></i> {{ entry.showTitle }}</li>
+                        <li itemprop="interactionStatistic" itemscope itemtype="http://schema.org/InteractionCounter">
+                    <span itemprop="userInteractionCount" content="{{ entry.views }}">
+                        <i class="icon-eye-open"></i> {{ entry.views }} Views
+                    </span>
+                        </li>
+                    </ul>
+                    <div class="pad25"></div>
+                    <div class="pad25"></div>
+                </div>
+            </div>
+
+            {% set related = craft
+                .entries()
+                .section('quips')
+                .search('showTitle::"' ~ entry.showTitle ~ '"')
+                .id(['not', entry.id])
+            %}
+
+            <h2>More Quips From {{ entry.showTitle }}</h2>
+            <div id="load" class="row latest" data-page="1">
+                {% for quip in related %}
+                    {{ quipCard(quip) }}
+                {% endfor %}
+            </div>
+        </div><!--//page-->
+
+        <div class="pad25 hidden-desktop"></div>
+    </div>
+{% endblock %}

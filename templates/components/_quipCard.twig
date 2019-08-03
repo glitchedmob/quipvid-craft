@@ -1,0 +1,27 @@
+{% macro quipCard(quip) %}
+    {% set image = quip.image.one() %}
+    <div class="span3">
+        <div class="tile">
+            <a
+                class="vid vid_modal"
+                data-id="{{ quip.slug }}"
+                data-name="{{ quip.title }}"
+                data-title="{{ quip.showTitle }}"
+                href="{{ quip.url }}"
+                style="background-image: url('{{ image ? image.url : quip.importedImage }}');"
+            ></a>
+            <h6>
+                <a
+                    class="vid_modal"
+                    data-id="{{ quip.slug }}"
+                    data-name="{{ quip.title }}"
+                    data-title="{{ quip.showTitle }}"
+                    href="{{ quip.url }}"
+                >
+                    <span>{{ quip.title }}</span>
+                </a>
+            </h6>
+        </div>
+        <div class="pad25"></div>
+    </div>
+{% endmacro %}
