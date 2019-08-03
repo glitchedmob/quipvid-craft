@@ -40,6 +40,7 @@
                 .section('quips')
                 .search('showTitle::"' ~ entry.showTitle ~ '"')
                 .id(['not', entry.id])
+                .all()
             %}
 
             <h2>More Quips From {{ entry.showTitle }}</h2>

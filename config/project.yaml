@@ -1,0 +1,222 @@
+dateModified: 1564875194
+email:
+  fromEmail: me@levizitting.com
+  fromName: Quipvid
+  transportType: craft\mail\transportadapters\Sendmail
+fieldGroups:
+  4594f2ce-d2bf-4165-b120-a325e2674e64:
+    name: Common
+fields:
+  372cd32d-6642-499b-96d1-ec338de309c9:
+    name: 'Imported Image'
+    handle: importedImage
+    instructions: ''
+    searchable: true
+    translationMethod: none
+    translationKeyFormat: null
+    type: craft\fields\PlainText
+    settings:
+      placeholder: ''
+      code: ''
+      multiline: ''
+      initialRows: '4'
+      charLimit: ''
+      columnType: text
+    contentColumnType: text
+    fieldGroup: 4594f2ce-d2bf-4165-b120-a325e2674e64
+  6ea25763-1ab4-4831-8b88-97fd94b1dc30:
+    name: Views
+    handle: views
+    instructions: ''
+    searchable: true
+    translationMethod: none
+    translationKeyFormat: null
+    type: craft\fields\Number
+    settings:
+      defaultValue: null
+      min: '0'
+      max: null
+      decimals: 0
+      size: null
+      prefix: ''
+      suffix: ''
+    contentColumnType: integer(10)
+    fieldGroup: 4594f2ce-d2bf-4165-b120-a325e2674e64
+  9c5a583f-e101-4b7b-a6be-950b8765e824:
+    name: Image
+    handle: image
+    instructions: ''
+    searchable: true
+    translationMethod: site
+    translationKeyFormat: null
+    type: craft\fields\Assets
+    settings:
+      useSingleFolder: ''
+      defaultUploadLocationSource: 'volume:d8dd9420-9aef-40f6-9049-ce2af3f30e4d'
+      defaultUploadLocationSubpath: ''
+      singleUploadLocationSource: 'volume:d8dd9420-9aef-40f6-9049-ce2af3f30e4d'
+      singleUploadLocationSubpath: ''
+      restrictFiles: '1'
+      allowedKinds:
+        - image
+      sources: '*'
+      source: null
+      targetSiteId: null
+      viewMode: list
+      limit: '1'
+      selectionLabel: ''
+      localizeRelations: false
+      validateRelatedElements: ''
+    contentColumnType: string
+    fieldGroup: 4594f2ce-d2bf-4165-b120-a325e2674e64
+  c45fc5ed-6c25-429c-975c-67d33e6438b9:
+    name: 'Show Title'
+    handle: showTitle
+    instructions: ''
+    searchable: true
+    translationMethod: none
+    translationKeyFormat: null
+    type: craft\fields\PlainText
+    settings:
+      placeholder: ''
+      code: ''
+      multiline: ''
+      initialRows: '4'
+      charLimit: ''
+      columnType: text
+    contentColumnType: text
+    fieldGroup: 4594f2ce-d2bf-4165-b120-a325e2674e64
+  f266d423-0296-474f-835c-f564c291f46e:
+    name: 'Imported Video'
+    handle: importedVideo
+    instructions: ''
+    searchable: true
+    translationMethod: none
+    translationKeyFormat: null
+    type: craft\fields\PlainText
+    settings:
+      placeholder: ''
+      code: ''
+      multiline: ''
+      initialRows: '4'
+      charLimit: ''
+      columnType: text
+    contentColumnType: text
+    fieldGroup: 4594f2ce-d2bf-4165-b120-a325e2674e64
+  fcb8001f-ed72-4a68-9b6b-be3e75aa971c:
+    name: Video
+    handle: video
+    instructions: ''
+    searchable: true
+    translationMethod: site
+    translationKeyFormat: null
+    type: craft\fields\Assets
+    settings:
+      useSingleFolder: ''
+      defaultUploadLocationSource: 'volume:d8dd9420-9aef-40f6-9049-ce2af3f30e4d'
+      defaultUploadLocationSubpath: ''
+      singleUploadLocationSource: 'volume:d8dd9420-9aef-40f6-9049-ce2af3f30e4d'
+      singleUploadLocationSubpath: ''
+      restrictFiles: '1'
+      allowedKinds:
+        - video
+      sources: '*'
+      source: null
+      targetSiteId: null
+      viewMode: list
+      limit: '1'
+      selectionLabel: ''
+      localizeRelations: false
+      validateRelatedElements: ''
+    contentColumnType: string
+    fieldGroup: 4594f2ce-d2bf-4165-b120-a325e2674e64
+plugins:
+  feed-me:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.1.2
+sections:
+  eb6a016f-af17-4b34-b331-e770f9c0f5e9:
+    name: Quips
+    handle: quips
+    type: channel
+    enableVersioning: true
+    propagationMethod: all
+    siteSettings:
+      6e74b455-d71d-4e07-b2c8-7695aebffebb:
+        enabledByDefault: true
+        hasUrls: true
+        uriFormat: 'watch/{slug}'
+        template: _quipDetail
+    entryTypes:
+      34845a6b-2510-480a-b2f1-3eb6250afb9e:
+        name: Quips
+        handle: quips
+        hasTitleField: true
+        titleLabel: Title
+        titleFormat: ''
+        sortOrder: 1
+        fieldLayouts:
+          53dd952a-76c5-4d99-b90c-a65f1888a30b:
+            tabs:
+              -
+                name: Content
+                sortOrder: 1
+                fields:
+                  9c5a583f-e101-4b7b-a6be-950b8765e824:
+                    required: false
+                    sortOrder: 2
+                  c45fc5ed-6c25-429c-975c-67d33e6438b9:
+                    required: false
+                    sortOrder: 1
+                  fcb8001f-ed72-4a68-9b6b-be3e75aa971c:
+                    required: false
+                    sortOrder: 3
+              -
+                name: 'Imported Content'
+                sortOrder: 2
+                fields:
+                  372cd32d-6642-499b-96d1-ec338de309c9:
+                    required: false
+                    sortOrder: 1
+                  6ea25763-1ab4-4831-8b88-97fd94b1dc30:
+                    required: false
+                    sortOrder: 3
+                  f266d423-0296-474f-835c-f564c291f46e:
+                    required: false
+                    sortOrder: 2
+siteGroups:
+  037bc64a-d0c0-4ce8-9cfa-d8600828fec5:
+    name: Quipvid
+sites:
+  6e74b455-d71d-4e07-b2c8-7695aebffebb:
+    baseUrl: '@web'
+    handle: default
+    hasUrls: true
+    language: en-US
+    name: Quipvid
+    primary: true
+    siteGroup: 037bc64a-d0c0-4ce8-9cfa-d8600828fec5
+    sortOrder: 1
+system:
+  edition: solo
+  name: Quipvid
+  live: true
+  schemaVersion: 3.2.16
+  timeZone: America/Los_Angeles
+users:
+  requireEmailVerification: true
+  allowPublicRegistration: false
+  defaultGroup: null
+  photoVolumeUid: null
+  photoSubpath: ''
+volumes:
+  d8dd9420-9aef-40f6-9049-ce2af3f30e4d:
+    name: Public
+    handle: public
+    type: craft\volumes\Local
+    hasUrls: true
+    url: '@web/assets'
+    settings:
+      path: '@webroot/assets'
+    sortOrder: 1
