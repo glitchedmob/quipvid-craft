@@ -1,4 +1,4 @@
-dateModified: 1564875194
+dateModified: 1564875255
 email:
   fromEmail: me@levizitting.com
   fromName: Quipvid
@@ -22,8 +22,8 @@ fields:
       initialRows: '4'
       charLimit: ''
       columnType: text
-    contentColumnType: text
     fieldGroup: 4594f2ce-d2bf-4165-b120-a325e2674e64
+    contentColumnType: text
   6ea25763-1ab4-4831-8b88-97fd94b1dc30:
     name: Views
     handle: views
@@ -40,8 +40,8 @@ fields:
       size: null
       prefix: ''
       suffix: ''
-    contentColumnType: integer(10)
     fieldGroup: 4594f2ce-d2bf-4165-b120-a325e2674e64
+    contentColumnType: integer(10)
   9c5a583f-e101-4b7b-a6be-950b8765e824:
     name: Image
     handle: image
@@ -67,8 +67,8 @@ fields:
       selectionLabel: ''
       localizeRelations: false
       validateRelatedElements: ''
-    contentColumnType: string
     fieldGroup: 4594f2ce-d2bf-4165-b120-a325e2674e64
+    contentColumnType: string
   c45fc5ed-6c25-429c-975c-67d33e6438b9:
     name: 'Show Title'
     handle: showTitle
@@ -84,8 +84,8 @@ fields:
       initialRows: '4'
       charLimit: ''
       columnType: text
-    contentColumnType: text
     fieldGroup: 4594f2ce-d2bf-4165-b120-a325e2674e64
+    contentColumnType: text
   f266d423-0296-474f-835c-f564c291f46e:
     name: 'Imported Video'
     handle: importedVideo
@@ -101,8 +101,8 @@ fields:
       initialRows: '4'
       charLimit: ''
       columnType: text
-    contentColumnType: text
     fieldGroup: 4594f2ce-d2bf-4165-b120-a325e2674e64
+    contentColumnType: text
   fcb8001f-ed72-4a68-9b6b-be3e75aa971c:
     name: Video
     handle: video
@@ -128,8 +128,8 @@ fields:
       selectionLabel: ''
       localizeRelations: false
       validateRelatedElements: ''
-    contentColumnType: string
     fieldGroup: 4594f2ce-d2bf-4165-b120-a325e2674e64
+    contentColumnType: string
 plugins:
   feed-me:
     edition: standard
@@ -142,12 +142,6 @@ sections:
     type: channel
     enableVersioning: true
     propagationMethod: all
-    siteSettings:
-      6e74b455-d71d-4e07-b2c8-7695aebffebb:
-        enabledByDefault: true
-        hasUrls: true
-        uriFormat: 'watch/{slug}'
-        template: _quipDetail
     entryTypes:
       34845a6b-2510-480a-b2f1-3eb6250afb9e:
         name: Quips
@@ -185,19 +179,25 @@ sections:
                   f266d423-0296-474f-835c-f564c291f46e:
                     required: false
                     sortOrder: 2
+    siteSettings:
+      6e74b455-d71d-4e07-b2c8-7695aebffebb:
+        enabledByDefault: true
+        hasUrls: true
+        uriFormat: 'watch/{slug}'
+        template: _quipDetail
 siteGroups:
   037bc64a-d0c0-4ce8-9cfa-d8600828fec5:
     name: Quipvid
 sites:
   6e74b455-d71d-4e07-b2c8-7695aebffebb:
-    baseUrl: '@web'
-    handle: default
-    hasUrls: true
-    language: en-US
     name: Quipvid
+    handle: default
+    language: en-US
+    hasUrls: true
+    baseUrl: '@web'
+    sortOrder: 1
     primary: true
     siteGroup: 037bc64a-d0c0-4ce8-9cfa-d8600828fec5
-    sortOrder: 1
 system:
   edition: solo
   name: Quipvid
