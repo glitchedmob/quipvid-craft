@@ -1,4 +1,4 @@
-dateModified: 1564875255
+dateModified: 1565143765
 email:
   fromEmail: me@levizitting.com
   fromName: Quipvid
@@ -24,24 +24,6 @@ fields:
       columnType: text
     fieldGroup: 4594f2ce-d2bf-4165-b120-a325e2674e64
     contentColumnType: text
-  6ea25763-1ab4-4831-8b88-97fd94b1dc30:
-    name: Views
-    handle: views
-    instructions: ''
-    searchable: true
-    translationMethod: none
-    translationKeyFormat: null
-    type: craft\fields\Number
-    settings:
-      defaultValue: null
-      min: '0'
-      max: null
-      decimals: 0
-      size: null
-      prefix: ''
-      suffix: ''
-    fieldGroup: 4594f2ce-d2bf-4165-b120-a325e2674e64
-    contentColumnType: integer(10)
   9c5a583f-e101-4b7b-a6be-950b8765e824:
     name: Image
     handle: image
@@ -173,9 +155,6 @@ sections:
                   372cd32d-6642-499b-96d1-ec338de309c9:
                     required: false
                     sortOrder: 1
-                  6ea25763-1ab4-4831-8b88-97fd94b1dc30:
-                    required: false
-                    sortOrder: 3
                   f266d423-0296-474f-835c-f564c291f46e:
                     required: false
                     sortOrder: 2

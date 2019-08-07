@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "b06f5558e2b623adbc97e84f818a7269",
+    "content-hash": "2878f591d21c468549a5789de69c9649",
     "packages": [
         {
             "name": "cakephp/core",
@@ -389,11 +389,11 @@
         },
         {
             "name": "craftcms/cms",
-            "version": "3.2.8",
+            "version": "3.2.9",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/cms/zipball/1239460455a61552510153fd249e48e3c325c27f",
-                "reference": "1239460455a61552510153fd249e48e3c325c27f",
+                "url": "https://api.github.com/repos/craftcms/cms/zipball/678ec9a876561152a74e5b3e07ebe0d2ca989c22",
+                "reference": "678ec9a876561152a74e5b3e07ebe0d2ca989c22",
                 "shasum": ""
             },
             "require": {
@@ -440,16 +440,6 @@
                 "bower-asset/punycode": "1.3.*",
                 "bower-asset/yii2-pjax": "~2.0.1"
             },
-            "require-dev": {
-                "codeception/codeception": "^3.0",
-                "codeception/mockery-module": "^0.3",
-                "codeception/phpunit-wrapper": "^7.7",
-                "codeception/specify": "^0.4",
-                "codeception/verify": "^1.0",
-                "fzaninotto/faker": "^1.8",
-                "league/factory-muffin": "^3.0",
-                "vlucas/phpdotenv": "^3.0"
-            },
             "suggest": {
                 "ext-iconv": "Adds support for more character encodings than PHP’s built-in mb_convert_encoding() function, which Craft will take advantage of when converting strings to UTF-8.",
                 "ext-imagick": "Adds support for more image processing formats and options.",
@@ -461,7 +451,6 @@
                     "craft\\": "src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "proprietary"
             ],
@@ -472,7 +461,15 @@
                 "craftcms",
                 "yii2"
             ],
-            "time": "2019-07-30T16:49:10+00:00"
+            "support": {
+                "email": "support@craftcms.com",
+                "issues": "https://github.com/craftcms/cms/issues?state=open",
+                "forum": "https://craftcms.stackexchange.com/",
+                "source": "https://github.com/craftcms/cms",
+                "docs": "https://docs.craftcms.com/v3/",
+                "rss": "https://github.com/craftcms/cms/releases.atom"
+            },
+            "time": "2019-08-06T17:08:35+00:00"
         },
         {
             "name": "craftcms/feed-me",
